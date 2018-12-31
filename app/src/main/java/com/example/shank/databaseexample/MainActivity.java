@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +30,16 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                if(edReg.getText().toString().trim().length() == 0 || edName.getText().toString().trim().length() == 0 || edMarks.getText().toString().trim().length() == 0){
+
+                    Toast.makeText(MainActivity.this, "Enter all values ..", Toast.LENGTH_LONG).show();
+                }
+                String reg = edReg.getText().toString();
+                String name = edName.getText().toString();
+                String marks = edMarks.getText().toString();
+
+                database.execSQL("insert into student values('"+reg+"','"+name+"','"+marks+")");
+                Toast.makeText(MainActivity.this, "Data saved..", Toast.LENGTH_SHORT).show();
             }
         });
     }
