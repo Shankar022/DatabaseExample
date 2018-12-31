@@ -1,8 +1,10 @@
 <resources>
-    <string name="app_name">DatabaseExample</string>
+    <string name="app_name">Database Example</string>
     <string name="student_info">Student Info ..</string>
     <string name="reg_no">Reg. No</string>
     <string name="name">Name</string>
     <string name="marks">Marks</string>
     <string name="store">STORE</string>
+    <string name="display_data">DISPLAY DATA</string>
+    <string name="search">SEARCH</string>
 </resources>
